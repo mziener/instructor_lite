@@ -1,17 +1,7 @@
 defmodule InstructorLite.Adapters.Deepseek do
   @moduledoc """
-  Deepseek adapter derived from the OpenAI module.
-  [OpenAI](https://platform.openai.com/docs/overview) adapter.
+  Deepseek adapter following the guidelines provided [here](https://api-docs.deepseek.com/guides/json_mode)
 
-  This adapter is implemented using chat completions endpoint and [structured outputs](https://platform.openai.com/docs/guides/structured-outputs/structured-outputs).
-
-  > #### JSON mode {: .tip}
-  >
-  > Even though the adapter uses strict JSON Schema mode by default, it respects all explicitly provided keys in `params`. To switch to a less strict [JSON mode](https://platform.openai.com/docs/guides/structured-outputs/json-mode), simply provide the `response_format` key in your params.
-
-  ## Params
-  `params` argument should be shaped as a [Create chat completion request body](https://platform.openai.com/docs/api-reference/chat/create).
-   
   ## Example
 
   ```
